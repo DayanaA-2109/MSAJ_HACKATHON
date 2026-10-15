@@ -51,7 +51,7 @@ export default function UploadAudioButton({
         throw new Error(data.error || "ஒலிப்பதிவு பதிவேற்றம் தோல்வியடைந்தது");
       }
 
-      setStatusMessage("✅ ஒலிப்பதிவு வெற்றிகரமாக மாற்றப்பட்டது! புதுப்பிக்கப்படுகிறது...");
+      setStatusMessage("ஒலிப்பதிவு வெற்றிகரமாக மாற்றப்பட்டது! புதுப்பிக்கப்படுகிறது...");
 
       // Short delay for user to read success message before refreshing the page
       setTimeout(() => {
@@ -92,26 +92,65 @@ export default function UploadAudioButton({
       >
         {isUploading ? (
           <>
-            <span className="animate-spin text-sm">⏳</span>
+            <svg
+              className="animate-spin w-3.5 h-3.5 text-current"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="12" y1="2" x2="12" y2="6" />
+              <line x1="12" y1="18" x2="12" y2="22" />
+              <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
+              <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
+              <line x1="2" y1="12" x2="6" y2="12" />
+              <line x1="18" y1="12" x2="22" y2="12" />
+              <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
+              <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
+            </svg>
             <span>பதிவேற்றப்படுகிறது...</span>
           </>
         ) : (
           <>
-            <span>🎙️</span>
+            <svg
+              className={compact ? "w-3 h-3 text-current" : "w-4 h-4 text-current"}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+              <line x1="12" y1="19" x2="12" y2="22" />
+            </svg>
             <span>{label || defaultLabel}</span>
           </>
         )}
       </button>
 
       {statusMessage && (
-        <span className="text-xs font-medium text-[#2D6A4F] mt-1.5 animate-pulse">
-          {statusMessage}
+        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#2D6A4F] mt-1.5 animate-pulse">
+          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="20 6 9 17 4 12" />
+          </svg>
+          <span>{statusMessage}</span>
         </span>
       )}
 
       {errorMessage && (
-        <span className="text-xs font-medium text-[#8B1E1E] mt-1.5">
-          ⚠️ {errorMessage}
+        <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#8B1E1E] mt-1.5">
+          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <span>{errorMessage}</span>
         </span>
       )}
     </div>

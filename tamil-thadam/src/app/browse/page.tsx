@@ -5,6 +5,7 @@ import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import StoryCard from "@/components/StoryCard";
 import OrnamentDivider from "@/components/OrnamentDivider";
+import PulamIcon from "@/components/PulamIcon";
 import { INITIAL_STORIES, DISTRICTS, PULAMS, Story } from "@/data/mock-stories";
 
 function BrowseContent() {
@@ -143,7 +144,7 @@ function BrowseContent() {
               <option value="all">எல்லா மாவட்டங்களும்</option>
               {DISTRICTS.map((d) => (
                 <option key={d.slug} value={d.slug}>
-                  📍 {d.name_ta}
+                  {d.name_ta}
                 </option>
               ))}
             </select>
@@ -162,7 +163,7 @@ function BrowseContent() {
               <option value="all">எல்லா புலங்களும்</option>
               {PULAMS.map((p) => (
                 <option key={p.slug} value={p.slug}>
-                  {p.emoji} {p.name_ta}
+                  {p.name_ta}
                 </option>
               ))}
             </select>
@@ -179,9 +180,9 @@ function BrowseContent() {
               className="w-full px-3 py-2.5 rounded-xl bg-[#FDF8EE] border border-[#D9C9A8] text-sm text-[#2B1810] focus:border-[#8B1E1E] focus:outline-none"
             >
               <option value="all">எல்லா நிலைகளும்</option>
-              <option value="verified">✅ சரிபார்க்கப்பட்டது</option>
-              <option value="in_review">🕓 சரிபார்ப்பில் உள்ளது</option>
-              <option value="unverified">⚪ சரிபார்க்கப்படவில்லை</option>
+              <option value="verified">சரிபார்க்கப்பட்டது (Verified)</option>
+              <option value="in_review">சரிபார்ப்பில் உள்ளது (In Review)</option>
+              <option value="unverified">சரிபார்க்கப்படவில்லை (Unverified)</option>
             </select>
           </div>
         </div>
@@ -196,11 +197,14 @@ function BrowseContent() {
             {/* Active Chips */}
             {selectedDistrict !== "all" && (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[#F7EDD8] text-[#8B1E1E] border border-[#D9C9A8]">
-                <span>📍 {DISTRICTS.find((d) => d.slug === selectedDistrict)?.name_ta}</span>
+                <svg className="w-3 h-3 text-[#8B1E1E] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+                <span>{DISTRICTS.find((d) => d.slug === selectedDistrict)?.name_ta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedDistrict("all")}
-                  className="hover:font-bold"
+                  className="hover:font-bold ml-1"
                 >
                   ✕
                 </button>
@@ -209,14 +213,14 @@ function BrowseContent() {
 
             {selectedPulam !== "all" && (
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[#FDF1D0] text-[#2B1810] border border-[#F5D98B]">
+                <PulamIcon slug={selectedPulam} className="w-3.5 h-3.5 text-[#8B1E1E]" />
                 <span>
-                  {PULAMS.find((p) => p.slug === selectedPulam)?.emoji}{" "}
                   {PULAMS.find((p) => p.slug === selectedPulam)?.name_ta}
                 </span>
                 <button
                   type="button"
                   onClick={() => setSelectedPulam("all")}
-                  className="hover:font-bold"
+                  className="hover:font-bold ml-1"
                 >
                   ✕
                 </button>

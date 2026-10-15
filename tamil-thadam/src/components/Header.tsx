@@ -47,7 +47,7 @@ export default function Header() {
             href="/map"
             className="hover:text-[#8B1E1E] transition-colors py-2 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#D4A017] after:absolute after:bottom-0 after:left-0 after:transition-all"
           >
-            Katchi (காட்சி)
+            காட்சி
           </Link>
           <Link
             href="/about"
@@ -57,7 +57,9 @@ export default function Header() {
           </Link>
 
           <Link href="/record" className="stamp-btn-primary ml-2">
-            <span>🎙</span>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 02-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+            </svg>
             <span>பதிவு செய்</span>
           </Link>
         </nav>
@@ -117,7 +119,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 border-b border-[#F7EDD8] hover:text-[#8B1E1E]"
             >
-              Katchi (காட்சி)
+              காட்சி
             </Link>
             <Link
               href="/about"
@@ -132,7 +134,9 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="stamp-btn-primary w-full text-center mt-2 justify-center"
             >
-              <span>🎙</span>
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 02-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+              </svg>
               <span>பதிவு செய்</span>
             </Link>
           </nav>

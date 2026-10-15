@@ -279,9 +279,11 @@ export default function RecordPage() {
               <button
                 type="button"
                 onClick={stopRecording}
-                className="stamp-btn-outline !text-lg !px-8 !py-4 border-2 border-[#8B1E1E] text-[#8B1E1E] font-bold shadow-md"
+                className="stamp-btn-outline !text-lg !px-8 !py-4 border-2 border-[#8B1E1E] text-[#8B1E1E] font-bold shadow-md inline-flex items-center gap-2"
               >
-                <span>⏹</span>
+                <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="5" y="5" width="14" height="14" rx="2" />
+                </svg>
                 <span>நிறுத்து</span>
               </button>
             </div>
@@ -292,7 +294,20 @@ export default function RecordPage() {
                 onClick={startRecording}
                 className="stamp-btn-primary !w-32 !h-32 !rounded-full !flex-col !p-0 shadow-2xl text-center group"
               >
-                <span className="text-4xl block mb-1 group-hover:scale-110 transition-transform">🎙</span>
+                <svg
+                  className="w-10 h-10 mb-1 group-hover:scale-110 transition-transform text-white"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z" />
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                  <line x1="12" y1="19" x2="12" y2="22" />
+                </svg>
                 <span className="text-sm font-bold">பதிவு செய்</span>
               </button>
               <p className="text-xs text-[#7A6A55] mt-5">

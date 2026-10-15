@@ -4,214 +4,269 @@ export type DistrictCaption = {
 };
 
 /**
- * Placeholder captions keyed by English district name (GeoJSON `district` property).
- * Replace these later with field-collected lines.
+ * Verified district captions for all 38 districts of Tamil Nadu.
  */
 export const districtCaptions: Record<string, DistrictCaption> = {
-  Ariyalur: {
-    tamil: "அரியலூர்",
+  Chennai: {
+    tamil: "சென்னை",
     caption:
-      "Limestone country and temple tanks hold quiet harvest memories.\nElders still speak of Gangaikonda Cholapuram’s living stone.",
+      "மெரினா கடற்கரை மற்றும் திரைப்படத் துறைக்குப் புகழ்பெற்றது. தமிழ்நாட்டின் தலைநகரமாக விளங்குகிறது.",
   },
   Chengalpattu: {
     tamil: "செங்கல்பட்டு",
     caption:
-      "Palar river farms and old choultries sit between city and coast.\nNight markets remember salt, silk, and monsoon carts.",
-  },
-  Chennai: {
-    tamil: "சென்னை",
-    caption:
-      "Marina winds carry film songs, harbour horns, and filter coffee.\nNeighbourhood streets keep a city’s many mother tongues.",
-  },
-  Coimbatore: {
-    tamil: "கோயம்புத்தூர்",
-    caption:
-      "Kongu speech, mill sirens, and Western Ghats rain share this air.\nGrandmothers still greet the young with ஏனுங்க என்னங்க.",
-  },
-  Cuddalore: {
-    tamil: "கடலூர்",
-    caption:
-      "Backwaters, silver beaches, and old port stories meet here.\nFishing hamlets count the tide before they count the clock.",
-  },
-  Dharmapuri: {
-    tamil: "தருமபுரி",
-    caption:
-      "Mango orchards and hill paths season the everyday table.\nWells and cattle fairs still set the village calendar.",
-  },
-  Dindigul: {
-    tamil: "திண்டுக்கல்",
-    caption:
-      "Locksmiths, palmyra sweets, and fort silhouettes mark the town.\nKodaikanal mist begins just beyond the plains.",
-  },
-  Erode: {
-    tamil: "ஈரோடு",
-    caption:
-      "Turmeric hills and loom towns colour the Kongu belt.\nMarket mornings smell of spice sacks and wet earth.",
-  },
-  Kallakurichi: {
-    tamil: "கள்ளக்குறிச்சி",
-    caption:
-      "A young district with old tank-irrigation wisdom.\nPaddy song and palmyra shade still frame the roads.",
+      "மாமல்லபுரம் சிற்பங்கள் மற்றும் கடற்கரைக் கோயில்களுக்குப் புகழ்பெற்றது. பல்லவர் காலக் கலைகளின் சிறப்பைக் கொண்டுள்ளது.",
   },
   Kancheepuram: {
     tamil: "காஞ்சிபுரம்",
     caption:
-      "Silk looms click beside temple corridors and tank steps.\nWeavers keep colour recipes that never entered a book.",
+      "பட்டுப் புடவைகள் மற்றும் பழமையான கோயில்களுக்குப் புகழ்பெற்றது. ஆன்மிக நகரமாக விளங்குகிறது.",
   },
-  Kanyakumari: {
-    tamil: "கன்னியாகுமரி",
+  Kanchipuram: {
+    tamil: "காஞ்சிபுரம்",
     caption:
-      "Three seas meet where sunrise sermons begin the day.\nCoastal kitchens mix coconut, fish, and pilgrimage talk.",
-  },
-  Karur: {
-    tamil: "கரூர்",
-    caption:
-      "Amaravathi banks and textile yards share one workday rhythm.\nHome looms still outlast factory clocks in family stories.",
-  },
-  Krishnagiri: {
-    tamil: "கிருஷ்ணகிரி",
-    caption:
-      "Mango belts and granite hills guard the northern pass.\nFort ruins watch over orchards that feed the plains.",
-  },
-  Madurai: {
-    tamil: "மதுரை",
-    caption:
-      "Temple drums, jasmine stalls, and night markets never sleep.\nThe city’s speech is as warm as its jiggered coffee.",
-  },
-  Mayiladuthurai: {
-    tamil: "மயிலாடுதுறை",
-    caption:
-      "Cauvery delta temples and boat songs share the same tide.\nHarvest festivals still dress the riverbanks in lamps.",
-  },
-  Nagapattinam: {
-    tamil: "நாகப்பட்டினம்",
-    caption:
-      "A port of many faiths, nets, and monsoon memories.\nShore temples keep watch over returning boats.",
-  },
-  Namakkal: {
-    tamil: "நாமக்கல்",
-    caption:
-      "Egg baskets, lorry horns, and hill temples share the town.\nAnjaneya’s rock still orients travellers at dusk.",
-  },
-  Perambalur: {
-    tamil: "பெரம்பலூர்",
-    caption:
-      "Fossil soil and onion fields hold an older Tamil Nadu.\nTank bunds still decide who plants and when.",
-  },
-  Pudukkottai: {
-    tamil: "புதுக்கோட்டை",
-    caption:
-      "Cave beds, palace courtyards, and dryland farms endure.\nStorytellers still name every tank as if it were kin.",
-  },
-  Ramanathapuram: {
-    tamil: "இராமநாதபுரம்",
-    caption:
-      "Gulf winds, pearl talk, and pilgrimage roads braid together.\nRamnad kitchens keep chilli and memory in equal measure.",
-  },
-  Ranipet: {
-    tamil: "இராணிப்பேட்டை",
-    caption:
-      "A new name on an old Palar industrial shore.\nLeather yards and river villages still share one dawn.",
-  },
-  Salem: {
-    tamil: "சேலம்",
-    caption:
-      "Mango, steel, and hill stations meet in one district breath.\nMarket Tamil here is quick, salty, and kind.",
-  },
-  Sivagangai: {
-    tamil: "சிவகங்கை",
-    caption:
-      "Maravar country of palaces, tanks, and dryland courage.\nChettinad kitchens nearby perfume the evening air.",
-  },
-  Tenkasi: {
-    tamil: "தென்காசி",
-    caption:
-      "Courtallam mist walks down to paddy and temple streets.\nWestern Ghats rain writes the year’s first sentence.",
-  },
-  Thanjavur: {
-    tamil: "தஞ்சாவூர்",
-    caption:
-      "Delta gold, bronze lamps, and veena notes fill the palace town.\nEvery harvest still bows toward the Brihadeeswara tower.",
-  },
-  "The Nilgiris": {
-    tamil: "நீலகிரி",
-    caption:
-      "Tea slopes, Toda memory, and monsoon clouds share the ridges.\nValley towns keep many languages around one hearth.",
-  },
-  Theni: {
-    tamil: "தேனி",
-    caption:
-      "Cardamom wind and Cumbum grapes cool the western edge.\nHill markets open before the plains have warmed.",
-  },
-  Thiruvarur: {
-    tamil: "திருவாரூர்",
-    caption:
-      "Temple cars, tyagaraja soil, and endless paddy meet here.\nCarnatic phrases still hitch a ride with the breeze.",
-  },
-  Thoothukudi: {
-    tamil: "தூத்துக்குடி",
-    caption:
-      "Salt pans, harbour cranes, and pearl-coast speech spark the air.\nUppalam wind still seasons every conversation.",
-  },
-  Tiruchirappalli: {
-    tamil: "திருச்சிராப்பள்ளி",
-    caption:
-      "Rockfort watches a city of railways, cigars, and river islands.\nCauvery talk begins before breakfast and ends after dusk.",
-  },
-  Tirunelveli: {
-    tamil: "திருநெல்வேலி",
-    caption:
-      "Halwa shops, Tamirabarani ghats, and dry wit define the south.\nNellai speech can scold and bless in the same breath.",
-  },
-  Tirupathur: {
-    tamil: "திருப்பத்தூர்",
-    caption:
-      "Sandal slopes and fort towns guard the Javadi edge.\nA young district carrying Vellore’s older stories.",
-  },
-  Tiruppur: {
-    tamil: "திருப்பூர்",
-    caption:
-      "Knitwear nights and Kongu mornings share the same shift.\nNoyyal stories still surface between factory gates.",
+      "பட்டுப் புடவைகள் மற்றும் பழமையான கோயில்களுக்குப் புகழ்பெற்றது. ஆன்மிக நகரமாக விளங்குகிறது.",
   },
   Tiruvallur: {
     tamil: "திருவள்ளூர்",
     caption:
-      "Temple tanks and industrial parks sit on Chennai’s shoulder.\nVillage fairs still arrive on the city’s doorstep.",
+      "திருத்தணி முருகன் கோயில் மற்றும் பழவேற்காடு ஏரிக்குப் புகழ்பெற்றது. விவசாயம் மற்றும் தொழிற்சாலைகள் நிறைந்த மாவட்டம்.",
   },
-  Tiruvannamalai: {
-    tamil: "திருவண்ணாமலை",
+  Thiruvallur: {
+    tamil: "திருவள்ளூர்",
     caption:
-      "Arunachala’s girivalam lamps rewrite the mountain each month.\nAshram silence and market noise walk the same street.",
+      "திருத்தணி முருகன் கோயில் மற்றும் பழவேற்காடு ஏரிக்குப் புகழ்பெற்றது. விவசாயம் மற்றும் தொழிற்சாலைகள் நிறைந்த மாவட்டம்.",
   },
   Vellore: {
     tamil: "வேலூர்",
     caption:
-      "Fort moats, leather yards, and hospital corridors share the town.\nPalar memory still shapes the food and the jokes.",
+      "வேலூர் கோட்டை மற்றும் தங்கக் கோயிலுக்குப் புகழ்பெற்றது. மருத்துவக் கல்வியில் சிறந்து விளங்குகிறது.",
+  },
+  Ranipet: {
+    tamil: "ராணிப்பேட்டை",
+    caption:
+      "தோல் பொருட்கள் தயாரிப்பிற்குப் புகழ்பெற்றது. முக்கியமான தொழில் வளர்ச்சி கொண்ட மாவட்டமாகும்.",
+  },
+  Tirupathur: {
+    tamil: "திருப்பத்தூர்",
+    caption:
+      "ஏலகிரி மலை மற்றும் இயற்கை அழகிற்குப் புகழ்பெற்றது. சுற்றுலா மற்றும் விவசாயம் சிறந்து விளங்குகின்றன.",
+  },
+  Tirupattur: {
+    tamil: "திருப்பத்தூர்",
+    caption:
+      "ஏலகிரி மலை மற்றும் இயற்கை அழகிற்குப் புகழ்பெற்றது. சுற்றுலா மற்றும் விவசாயம் சிறந்து விளங்குகின்றன.",
+  },
+  Tiruvannamalai: {
+    tamil: "திருவண்ணாமலை",
+    caption:
+      "அண்ணாமலையார் கோயில் மற்றும் கார்த்திகை தீபத்திற்குப் புகழ்பெற்றது. கிரிவலம் செல்லும் பக்தர்களின் முக்கியத் தலமாகும்.",
+  },
+  Thiruvannamalai: {
+    tamil: "திருவண்ணாமலை",
+    caption:
+      "அண்ணாமலையார் கோயில் மற்றும் கார்த்திகை தீபத்திற்குப் புகழ்பெற்றது. கிரிவலம் செல்லும் பக்தர்களின் முக்கியத் தலமாகும்.",
+  },
+  Villupuram: {
+    tamil: "விழுப்புரம்",
+    caption:
+      "செஞ்சி கோட்டை மற்றும் வரலாற்றுச் சிறப்புகளுக்குப் புகழ்பெற்றது. விவசாயம் முக்கியத் தொழிலாக விளங்குகிறது.",
   },
   Viluppuram: {
     tamil: "விழுப்புரம்",
     caption:
-      "Rail junctions, Gingee hills, and sugarcane belts open the south.\nPilgrim roads to the coast still pause here for tea.",
+      "செஞ்சி கோட்டை மற்றும் வரலாற்றுச் சிறப்புகளுக்குப் புகழ்பெற்றது. விவசாயம் முக்கியத் தொழிலாக விளங்குகிறது.",
+  },
+  Kallakurichi: {
+    tamil: "கள்ளக்குறிச்சி",
+    caption:
+      "கல்வராயன் மலை மற்றும் இயற்கை அழகிற்குப் புகழ்பெற்றது. நெல் மற்றும் கரும்பு சாகுபடியில் சிறந்து விளங்குகிறது.",
+  },
+  Cuddalore: {
+    tamil: "கடலூர்",
+    caption:
+      "சிதம்பரம் நடராஜர் கோயில் மற்றும் பிச்சாவரம் காடுகளுக்குப் புகழ்பெற்றது. கடற்கரை மற்றும் இயற்கை வளங்களைக் கொண்டுள்ளது.",
+  },
+  Dharmapuri: {
+    tamil: "தருமபுரி",
+    caption:
+      "ஒகேனக்கல் அருவிக்குப் புகழ்பெற்றது. மாம்பழ உற்பத்தியில் சிறந்து விளங்குகிறது.",
+  },
+  Krishnagiri: {
+    tamil: "கிருஷ்ணகிரி",
+    caption:
+      "மாம்பழ உற்பத்தி மற்றும் கிருஷ்ணகிரி அணைக்குப் புகழ்பெற்றது. விவசாயம் மற்றும் மலை வளங்களைக் கொண்டுள்ளது.",
+  },
+  Salem: {
+    tamil: "சேலம்",
+    caption:
+      "மாம்பழம், வெள்ளிக் கொலுசு மற்றும் எஃகுத் தொழிலுக்குப் புகழ்பெற்றது. ஏற்காடு மலைப்பகுதி சுற்றுலாப் பயணிகளை ஈர்க்கிறது.",
+  },
+  Namakkal: {
+    tamil: "நாமக்கல்",
+    caption:
+      "முட்டை உற்பத்தி மற்றும் லாரித் தொழிலுக்குப் புகழ்பெற்றது. ஆஞ்சநேயர் கோயில் இதன் முக்கிய அடையாளமாகும்.",
+  },
+  Erode: {
+    tamil: "ஈரோடு",
+    caption:
+      "மஞ்சள் உற்பத்தி மற்றும் ஜவுளித் தொழிலுக்குப் புகழ்பெற்றது. விவசாயம் மற்றும் நெசவுத் தொழிலில் சிறந்து விளங்குகிறது.",
+  },
+  Tiruppur: {
+    tamil: "திருப்பூர்",
+    caption:
+      "பின்னலாடை உற்பத்தி மற்றும் ஏற்றுமதிக்குப் புகழ்பெற்றது. இந்தியாவின் முக்கிய ஆடைத் தொழில் மையமாகும்.",
+  },
+  Tirupur: {
+    tamil: "திருப்பூர்",
+    caption:
+      "பின்னலாடை உற்பத்தி மற்றும் ஏற்றுமதிக்குப் புகழ்பெற்றது. இந்தியாவின் முக்கிய ஆடைத் தொழில் மையமாகும்.",
+  },
+  Coimbatore: {
+    tamil: "கோயம்புத்தூர்",
+    caption:
+      "ஜவுளி மற்றும் இயந்திரத் தொழிலுக்குப் புகழ்பெற்றது. தென்னிந்தியாவின் மான்செஸ்டர் என்று அழைக்கப்படுகிறது.",
+  },
+  "The Nilgiris": {
+    tamil: "நீலகிரி",
+    caption:
+      "ஊட்டி மற்றும் தேயிலைத் தோட்டங்களுக்குப் புகழ்பெற்றது. மலைகளும் குளிர்ந்த காலநிலையும் இதன் சிறப்புகளாகும்.",
+  },
+  Nilgiris: {
+    tamil: "நீலகிரி",
+    caption:
+      "ஊட்டி மற்றும் தேயிலைத் தோட்டங்களுக்குப் புகழ்பெற்றது. மலைகளும் குளிர்ந்த காலநிலையும் இதன் சிறப்புகளாகும்.",
+  },
+  Dindigul: {
+    tamil: "திண்டுக்கல்",
+    caption:
+      "பூட்டுத் தொழில் மற்றும் பிரியாணிக்குப் புகழ்பெற்றது. பழனி முருகன் கோயில் இதன் முக்கியச் சிறப்பாகும்.",
+  },
+  Karur: {
+    tamil: "கரூர்",
+    caption:
+      "வீட்டு ஜவுளி உற்பத்தி மற்றும் ஏற்றுமதிக்குப் புகழ்பெற்றது. காவிரி ஆற்றின் வளத்தால் விவசாயம் சிறக்கிறது.",
+  },
+  Tiruchirappalli: {
+    tamil: "திருச்சிராப்பள்ளி",
+    caption:
+      "மலைக்கோட்டை மற்றும் ஸ்ரீரங்கம் கோயிலுக்குப் புகழ்பெற்றது. கல்வி மற்றும் பொறியியல் தொழிலில் சிறந்து விளங்குகிறது.",
+  },
+  Trichy: {
+    tamil: "திருச்சிராப்பள்ளி",
+    caption:
+      "மலைக்கோட்டை மற்றும் ஸ்ரீரங்கம் கோயிலுக்குப் புகழ்பெற்றது. கல்வி மற்றும் பொறியியல் தொழிலில் சிறந்து விளங்குகிறது.",
+  },
+  Perambalur: {
+    tamil: "பெரம்பலூர்",
+    caption:
+      "மக்காச்சோளம் மற்றும் பருத்தி சாகுபடிக்குப் புகழ்பெற்றது. சாத்தனூர் கல்மரம் இதன் தனிச்சிறப்பாகும்.",
+  },
+  Ariyalur: {
+    tamil: "அரியலூர்",
+    caption:
+      "சுண்ணாம்புக்கல் வளம் மற்றும் சிமெண்ட் தொழிலுக்குப் புகழ்பெற்றது. பழங்கால உயிரினப் படிமங்களுக்காகவும் அறியப்படுகிறது.",
+  },
+  Thanjavur: {
+    tamil: "தஞ்சாவூர்",
+    caption:
+      "பெரிய கோயில் மற்றும் தஞ்சாவூர் ஓவியத்திற்குப் புகழ்பெற்றது. தமிழகத்தின் நெற்களஞ்சியம் என்று அழைக்கப்படுகிறது.",
+  },
+  Thiruvarur: {
+    tamil: "திருவாரூர்",
+    caption:
+      "தியாகராஜர் கோயில் மற்றும் ஆழித்தேருக்குப் புகழ்பெற்றது. கர்நாடக இசை மற்றும் பாரம்பரியக் கலைகளின் சிறப்பைக் கொண்டுள்ளது.",
+  },
+  Tiruvarur: {
+    tamil: "திருவாரூர்",
+    caption:
+      "தியாகராஜர் கோயில் மற்றும் ஆழித்தேருக்குப் புகழ்பெற்றது. கர்நாடக இசை மற்றும் பாரம்பரியக் கலைகளின் சிறப்பைக் கொண்டுள்ளது.",
+  },
+  Nagapattinam: {
+    tamil: "நாகப்பட்டினம்",
+    caption:
+      "வேளாங்கண்ணி பேராலயம் மற்றும் நாகூர் தர்காவுக்குப் புகழ்பெற்றது. மீன்பிடித் தொழில் மற்றும் கடற்கரைகளைக் கொண்டுள்ளது.",
+  },
+  Mayiladuthurai: {
+    tamil: "மயிலாடுதுறை",
+    caption:
+      "மயூரநாதர் கோயில் மற்றும் காவிரிக் கரைக் கோயில்களுக்குப் புகழ்பெற்றது. விவசாயம் மற்றும் ஆன்மிகச் சிறப்புகளைக் கொண்டுள்ளது.",
+  },
+  Pudukkottai: {
+    tamil: "புதுக்கோட்டை",
+    caption:
+      "சித்தன்னவாசல் ஓவியங்கள் மற்றும் குடுமியான்மலைக்குப் புகழ்பெற்றது. பழங்காலக் கல்வெட்டுகள் மற்றும் வரலாற்றுச் சின்னங்களைக் கொண்டுள்ளது.",
+  },
+  Sivagangai: {
+    tamil: "சிவகங்கை",
+    caption:
+      "செட்டிநாடு வீடுகள் மற்றும் காரைக்குடி உணவுகளுக்குப் புகழ்பெற்றது. வேலுநாச்சியார் மற்றும் மருது சகோதரர்களின் வீர வரலாற்றைக் கொண்டுள்ளது.",
+  },
+  Sivaganga: {
+    tamil: "சிவகங்கை",
+    caption:
+      "செட்டிநாடு வீடுகள் மற்றும் காரைக்குடி உணவுகளுக்குப் புகழ்பெற்றது. வேலுநாச்சியார் மற்றும் மருது சகோதரர்களின் வீர வரலாற்றைக் கொண்டுள்ளது.",
+  },
+  Madurai: {
+    tamil: "மதுரை",
+    caption:
+      "மீனாட்சி அம்மன் கோயில் மற்றும் சித்திரைத் திருவிழாவிற்குப் புகழ்பெற்றது. மல்லிகைப் பூ மற்றும் மதுரை அல்வாவிற்கும் சிறப்பு பெற்றது.",
+  },
+  Theni: {
+    tamil: "தேனி",
+    caption:
+      "மேகமலை மற்றும் கும்பக்கரை அருவிக்குப் புகழ்பெற்றது. திராட்சை மற்றும் ஏலக்காய் சாகுபடியில் சிறந்து விளங்குகிறது.",
   },
   Virudhunagar: {
     tamil: "விருதுநகர்",
     caption:
-      "Chilli sacks, match-works, and Chettinad roads meet in heat.\nTown squares still argue politics over filter coffee.",
+      "சிவகாசியின் பட்டாசு மற்றும் அச்சுத் தொழிலுக்குப் புகழ்பெற்றது. தீப்பெட்டி உற்பத்தியில் முக்கிய இடம் வகிக்கிறது.",
+  },
+  Ramanathapuram: {
+    tamil: "இராமநாதபுரம்",
+    caption:
+      "இராமேஸ்வரம் கோயில் மற்றும் பாம்பன் பாலத்திற்குப் புகழ்பெற்றது. தனுஷ்கோடி மற்றும் கடற்கரைச் சுற்றுலாவிற்குச் சிறப்பு பெற்றது.",
+  },
+  Thoothukudi: {
+    tamil: "தூத்துக்குடி",
+    caption:
+      "முத்துத் தொழில் மற்றும் உப்பு உற்பத்திக்குப் புகழ்பெற்றது. முக்கியமான துறைமுக நகரமாக விளங்குகிறது.",
+  },
+  Tuticorin: {
+    tamil: "தூத்துக்குடி",
+    caption:
+      "முத்துத் தொழில் மற்றும் உப்பு உற்பத்திக்குப் புகழ்பெற்றது. முக்கியமான துறைமுக நகரமாக விளங்குகிறது.",
+  },
+  Tirunelveli: {
+    tamil: "திருநெல்வேலி",
+    caption:
+      "நெல்லையப்பர் கோயில் மற்றும் திருநெல்வேலி அல்வாவிற்குப் புகழ்பெற்றது. தாமிரபரணி ஆறு இம்மாவட்டத்தின் முக்கிய வளமாகும்.",
+  },
+  Tenkasi: {
+    tamil: "தென்காசி",
+    caption:
+      "குற்றால அருவிகள் மற்றும் காசி விஸ்வநாதர் கோயிலுக்குப் புகழ்பெற்றது. மேற்குத் தொடர்ச்சி மலையின் இயற்கை அழகைக் கொண்டுள்ளது.",
+  },
+  Kanyakumari: {
+    tamil: "கன்னியாகுமரி",
+    caption:
+      "விவேகானந்தர் பாறை மற்றும் திருவள்ளுவர் சிலைக்குப் புகழ்பெற்றது. முக்கடல் சங்கமம் மற்றும் சூரிய உதயக் காட்சிகளுக்குச் சிறப்பு பெற்றது.",
   },
 };
 
 export const MISSING_CAPTION_FALLBACK: DistrictCaption = {
   tamil: "மாவட்டம்",
   caption:
-    "A Tamil Nadu district waiting for its oral history note.\nReplace this placeholder with a field-collected caption.",
+    "தமிழ்நாட்டின் பாரம்பரியமும் வாய்மொழி வரலாறும் நிறைந்த மாவட்டம்.",
 };
 
 export function getDistrictCaption(districtName: string): DistrictCaption {
   if (districtCaptions[districtName]) {
     return districtCaptions[districtName];
   }
+  const clean = districtName.toLowerCase().trim();
   const match = Object.keys(districtCaptions).find(
-    (key) => key.toLowerCase() === districtName.toLowerCase()
+    (key) => key.toLowerCase().trim() === clean
   );
   return match ? districtCaptions[match] : MISSING_CAPTION_FALLBACK;
 }

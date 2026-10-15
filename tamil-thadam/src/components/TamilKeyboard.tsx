@@ -232,7 +232,27 @@ export default function TamilKeyboard() {
           aria-label={isOpen ? "தமிழ் விசைப்பலகையை மூடு" : "தமிழ் விசைப்பலகையைத் திறக்க"}
           className="stamp-btn-primary !px-4 !py-3 !rounded-full shadow-2xl flex items-center gap-2 border-2 border-[#D4A017] hover:scale-105 transition-all text-xs sm:text-sm font-bold"
         >
-          <span className="text-lg">⌨️</span>
+          <svg
+            className="w-5 h-5 text-current shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="M6 8h.001" />
+            <path d="M10 8h.001" />
+            <path d="M14 8h.001" />
+            <path d="M18 8h.001" />
+            <path d="M6 12h.001" />
+            <path d="M10 12h.001" />
+            <path d="M14 12h.001" />
+            <path d="M18 12h.001" />
+            <path d="M7 16h10" />
+          </svg>
           <span>{isOpen ? "விசைப்பலகை" : "தமிழ் தட்டச்சு"}</span>
         </button>
       </aside>
@@ -259,7 +279,27 @@ export default function TamilKeyboard() {
             ⋮⋮
           </div>
 
-          <span className="text-base">⌨️</span>
+          <svg
+            className="w-4 h-4 text-[#8B1E1E] shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="M6 8h.001" />
+            <path d="M10 8h.001" />
+            <path d="M14 8h.001" />
+            <path d="M18 8h.001" />
+            <path d="M6 12h.001" />
+            <path d="M10 12h.001" />
+            <path d="M14 12h.001" />
+            <path d="M18 12h.001" />
+            <path d="M7 16h10" />
+          </svg>
           <span className="text-xs font-bold text-[#8B1E1E]">தமிழ் விசை</span>
 
           {keyboardText && (
@@ -325,7 +365,27 @@ export default function TamilKeyboard() {
           >
             <div className="flex items-center gap-2">
               <span className="text-base text-[#7A6A55]">⋮⋮</span>
-              <span className="text-lg">⌨️</span>
+              <svg
+                className="w-4 h-4 text-[#8B1E1E] shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect width="20" height="16" x="2" y="4" rx="2" />
+                <path d="M6 8h.001" />
+                <path d="M10 8h.001" />
+                <path d="M14 8h.001" />
+                <path d="M18 8h.001" />
+                <path d="M6 12h.001" />
+                <path d="M10 12h.001" />
+                <path d="M14 12h.001" />
+                <path d="M18 12h.001" />
+                <path d="M7 16h10" />
+              </svg>
               <h3 className="text-xs sm:text-sm font-bold text-[#8B1E1E]">
                 தமிழ் விசைப்பலகை
               </h3>

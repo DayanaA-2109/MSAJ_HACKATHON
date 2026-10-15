@@ -6,6 +6,7 @@ import StoryPlayer from "@/components/StoryPlayer";
 import StoryCard from "@/components/StoryCard";
 import DeleteStoryButton from "@/components/DeleteStoryButton";
 import BackToHomeLink from "@/components/BackToHomeLink";
+import PulamIcon from "@/components/PulamIcon";
 import { getStoryById, getAllStories } from "@/lib/stories-store";
 
 export const instant = false;
@@ -26,7 +27,12 @@ async function StoryDetailContent({
   if (!story) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-20 text-center">
-        <span className="text-5xl block mb-4">📜</span>
+        <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-[#F7EDD8] flex items-center justify-center text-[#8B1E1E]">
+          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+        </div>
         <h1 className="text-2xl font-bold text-[#8B1E1E] mb-3">
           கதை கிடைக்கவில்லை
         </h1>
@@ -40,13 +46,13 @@ async function StoryDetailContent({
     );
   }
 
-  // Related stories from same district or pulam
   const allStories = await getAllStories();
   const relatedStories = allStories
     .filter(
       (s) =>
         s.id !== story.id &&
-        (s.district_slug === story.district_slug || s.pulam_slug === story.pulam_slug)
+        (s.pulam_slug === story.pulam_slug ||
+          s.district_slug === story.district_slug)
     )
     .slice(0, 3);
 
@@ -65,29 +71,34 @@ async function StoryDetailContent({
         <div className="flex flex-wrap items-center gap-2 mb-4">
           <Link
             href={`/districts/${story.district_slug}`}
-            className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-[#F7EDD8] text-[#8B1E1E] hover:bg-[#F5D98B]"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#F7EDD8] text-[#8B1E1E] hover:bg-[#F5D98B] transition-colors"
           >
-            <span>📍</span>
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+            </svg>
             <span>{story.district_name_ta}</span>
           </Link>
 
           <Link
             href={`/browse?pulam=${story.pulam_slug}`}
-            className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-[#FDF8EE] text-[#7A6A55] border border-[#D9C9A8]"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#FDF8EE] text-[#7A6A55] border border-[#D9C9A8] hover:border-[#D4A017] transition-colors"
           >
-            <span>{story.pulam_emoji}</span>
+            <PulamIcon slug={story.pulam_slug} className="w-3.5 h-3.5 text-[#7A6A55]" />
             <span>{story.pulam_name_ta}</span>
           </Link>
 
-          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFFDF7] text-[#2B1810] border border-[#D9C9A8]">
-            <span>👤</span>
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFFDF7] text-[#2B1810] border border-[#D9C9A8]">
+            <svg className="w-3.5 h-3.5 text-[#7A6A55]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
             <span>
               {story.informant_name} {story.informant_age ? `(${story.informant_age})` : ""}
             </span>
           </span>
 
           <span
-            className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold ml-auto ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold ml-auto ${
               story.verification_status === "verified"
                 ? "bg-[#DCF3E4] text-[#2D6A4F] border border-[#B8E4C4]"
                 : story.verification_status === "in_review"
@@ -95,13 +106,27 @@ async function StoryDetailContent({
                 : "bg-[#EEE9DD] text-[#6B5B45] border border-[#D9C9A8]"
             }`}
           >
-            <span>
-              {story.verification_status === "verified"
-                ? "✅ சரிபார்க்கப்பட்டது"
-                : story.verification_status === "in_review"
-                ? "🕓 சரிபார்ப்பில் உள்ளது"
-                : "⚪ சரிபார்க்கப்படவில்லை"}
-            </span>
+            {story.verification_status === "verified" ? (
+              <>
+                <svg className="w-3.5 h-3.5 text-[#2D6A4F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>சரிபார்க்கப்பட்டது</span>
+              </>
+            ) : story.verification_status === "in_review" ? (
+              <>
+                <svg className="w-3.5 h-3.5 text-[#8A6300]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>சரிபார்ப்பில் உள்ளது</span>
+              </>
+            ) : (
+              <>
+                <span className="w-2 h-2 rounded-full bg-[#8C7A6B]" />
+                <span>சரிபார்க்கப்படவில்லை</span>
+              </>
+            )}
           </span>
         </div>
 
@@ -125,8 +150,12 @@ async function StoryDetailContent({
 
       {/* Story Player with Click-to-Seek segments */}
       <div className="mb-10">
-        <h3 className="text-lg font-bold text-[#8B1E1E] mb-3">
-          🎧 குரல் பதிவு & ஒத்திசைவு இயக்கம்
+        <h3 className="text-lg font-bold text-[#8B1E1E] mb-3 flex items-center gap-2">
+          <svg className="w-5 h-5 text-[#8B1E1E]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+          </svg>
+          <span>குரல் பதிவு & ஒத்திசைவு இயக்கம்</span>
         </h3>
         <StoryPlayer
           storyId={story.id}
