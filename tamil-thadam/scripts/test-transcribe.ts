@@ -1,32 +1,29 @@
 // scripts/test-transcribe.ts
+import "dotenv/config";
 import dotenv from "dotenv";
+dotenv.config({ path: ".env.local" });
 import path from "node:path";
-import { pathToFileURL } from "node:url";
-
-// Load env FIRST, before any project code runs
-dotenv.config({ path: path.join(process.cwd(), ".env.local") });
-
-console.log("Env check:");
-console.log("  SARVAM_API_KEY:", process.env.SARVAM_API_KEY ? "✅ set" : "❌ missing");
-console.log("  SPEECHMATICS_API_KEY:", process.env.SPEECHMATICS_API_KEY ? "✅ set" : "❌ missing");
+import fs from "node:fs/promises";
 
 async function main() {
-  // DYNAMIC import — runs AFTER dotenv.config() above
   const { transcribeAudio } = await import("../src/lib/transcribe");
 
-  const file = path.join(process.cwd(), "test-audio", "clip5.mpeg.ogg");
-  const url = pathToFileURL(file).href;
+  const file = path.join(process.cwd(), "public", "uploads", "rec_1792082259057.webm");
+  const buf = await fs.readFile(file);
 
-  console.log("\n🎧 Transcribing:", url);
+  console.log(`\n🎧 Testing transcribeAudio on ${file} (${buf.length} bytes)...`);
   const t0 = Date.now();
-  const result = await transcribeAudio(url);
+  const result = await transcribeAudio(buf, 17, "recording.webm", "audio/webm");
   const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
 
-  console.log(`\n✅ Done in ${elapsed}s`);
-  console.log(`📝 Language: ${result.language}`);
-  console.log(`📊 Segments: ${result.segments.length}`);
-  console.log(`\n📄 Full text:\n${result.fullText}`);
-  console.log(`\n🧩 Segments:\n${JSON.stringify(result.segments, null, 2)}`);
+  console.log(`\n✅ Completed in ${elapsed}s`);
+  console.log(`🏷️ Provider used: ${result.provider}`);
+  console.log(`🌐 Language: ${result.language}`);
+  console.log(`\n📄 Verbatim Full Text:\n"${result.fullText}"`);
+  console.log(`\n🧩 Synchronized Segments:\n`, JSON.stringify(result.segments, null, 2));
 }
 
-main().catch((e) => { console.error("❌", e); process.exit(1); });
+main().catch((e) => {
+  console.error("❌ Test failed:", e);
+  process.exit(1);
+});

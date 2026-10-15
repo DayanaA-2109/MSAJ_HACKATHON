@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# தமிழ்த் தடம் (Tamil Thadam) — வாய்மொழி வரலாற்றுக் காப்பகம்
+### AI-Powered Platform to Preserve Tamil Oral History
 
-## Getting Started
+> **தமிழ் தடம்** — மூத்த தலைமுறையினரின் வாய்மொழி வரலாற்றை பாதுகாக்கும் ஒரு AI-இயக்கப்படும் டிஜிட்டல் தளம். Sarvam AI தமிழ் பேச்சை உரையாக மாற்றுகிறது, Gemini AI சுருக்கம் + குறிச்சொற்கள் உருவாக்குகிறது, மாவட்ட வரைபடம் கதைகளை பிராந்தியம் வாரியாக ஒழுங்கமைக்கிறது. பயனர்கள் கதைகளை பதிவு செய்து வெளியிடலாம், மற்றவர்கள் தேடலாம். நோக்கம் — தமிழ் மொழி அறிவு நிரந்தரமாக பாதுகாக்கப்பட வேண்டும்.
 
-First, run the development server:
+> **Tamil Thadam** — an AI-powered platform to preserve Tamil oral history. Sarvam AI transcribes Tamil speech, Gemini generates summaries and tags, and a district map organizes stories geographically. Users record and publish stories; anyone can search. Mission: permanent preservation of Tamil linguistic knowledge.
+
+---
+
+## 🎯 திட்ட நோக்கம் (Project Vision & Mission)
+தமிழ் மொழியின் வாய்மொழி வரலாற்றை டிஜிட்டல் வடிவில் பாதுகாக்கும் மக்கள் தளம். நமது மூத்த தலைமுறையினரின் நினைவுகள், அனுபவங்கள், கதைகள், பாரம்பரிய அறிவு — இவை அனைத்தும் அவர்களுடன் மறைந்து போகும் முன், அவற்றை பதிவு செய்து, எழுத்துப்பதிவாக மாற்றி, தேடக்கூடிய உரையாக ஒழுங்கமைத்து, வருங்கால தலைமுறைக்கு கடத்துவது எங்கள் நோக்கம்.
+
+---
+
+## 🔴 நாம் தீர்க்கும் 4 முக்கியப் பிரச்சினைகள் (The Problems)
+1. **பிரச்சினை 1 — மறையும் மொழி அறிவு:** பாரம்பரிய விவசாய முறைகள், நாட்டுப்புற மருத்துவம், பண்டிகை சம்பிரதாயங்கள், கிராம வரலாறு எழுதப்படாதவை. மூத்தவர் போனால் அறிவு நிரந்தரமாக இழக்கப்படும்.
+2. **பிரச்சினை 2 — இளைய தலைமுறையுடன் இணைப்பு இல்லை:** நகர்ப்புற இளைஞர்கள் தங்கள் வேர்கள், கிராம அடையாளம், பாட்டி-தாத்தா அனுபவங்களை அறியாமல் வளர்கிறார்கள்.
+3. **பிரச்சினை 3 — டிஜிட்டல் பாதுகாப்பு இல்லை:** யூடியூப் / வாட்ஸ்அப் போன்ற தளங்களில் பதிவுகள் தேட முடியாதவை, வகைப்படுத்தப்படாதவை, நிலையற்றவை மற்றும் தமிழ் தானியங்கி எழுத்துப்பதிவு இல்லாதவை.
+4. **பிரச்சினை 4 — வட்டார வழக்குகள் அழிகின்றன:** கொங்கு, மதுரை, நெல்லை என ஒவ்வொரு மாவட்டத்தின் பேச்சு வழக்குகளும் முறையான ஆவணமின்றி மறைகின்றன.
+
+---
+
+## ⚡ எங்கள் AI தீர்வு (The 6-Step Pipeline)
+1. **பதிவு (Record):** 30+ வழிகாட்டும் தமிழ் கேள்விகளுடன் எளிய குரல் பதிவு.
+2. **எழுத்துப்பதிவு (Transcribe):** Sarvam AI (Saarika v2.5) மூலம் துல்லியமான நேர முத்திரைகளுடன் கூடிய தமிழ் உரை.
+3. **சுருக்கம் & குறிச்சொற்கள் (Summarize + Tag):** Google Gemini AI மூலம் உடனடி சுருக்கம் & பண்பாட்டுக் குறிச்சொற்கள்.
+4. **ஒழுங்கமைப்பு (Organize):** 38 மாவட்டங்கள் மற்றும் 8 பண்பாட்டுப் புலங்கள் வாரியாக வகைப்பாடு.
+5. **தேடல் (Search):** முழு உரை தமிழ் தேடல் வசதி.
+6. **பாதுகாப்பு (Preserve):** Supabase Cloud Storage-ல் நிரந்தர வரலாற்று ஆவணம்.
+
+---
+
+## 🛠 தொழில்நுட்பக் கட்டமைப்பு (Tech Stack)
+- **Framework:** Next.js 16 (App Router) + React 19 + TypeScript
+- **Styling:** Custom Tamil Manuscript & Palm-leaf Heritage CSS Design System
+- **ASR (Speech-to-Text):** Sarvam AI (`saarika:v2.5` Tamil engine)
+- **LLM Intelligence:** Google Gemini (`gemini-2.5-flash` / `gemini-pro`)
+- **Database & Storage:** Supabase (PostgreSQL + Audio Buckets)
+- **Deployment:** Vercel Edge
+
+---
+
+## 🚀 தொடங்குவது எப்படி (Getting Started)
 
 ```bash
+# Dependencies நிறுவல்
+npm install
+
+# உள்ளூர் சர்வரை இயக்குதல்
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+உலாவியில் [http://localhost:3000](http://localhost:3000) திறந்து பார்க்கலாம்.
