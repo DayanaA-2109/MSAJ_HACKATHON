@@ -199,6 +199,25 @@ body {
   animation: pulseDot 1.2s infinite ease-in-out;
 }
 
+@keyframes mapPinPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0.45;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1.85);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.85);
+    opacity: 0;
+  }
+}
+
+.map-pin-pulse {
+  animation: mapPinPulse 2.2s ease-out infinite;
+}
+
 @keyframes floatOrnaments {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-8px) rotate(6deg); }

@@ -44,6 +44,12 @@ export default function Header() {
             மாவட்டங்கள்
           </Link>
           <Link
+            href="/map"
+            className="hover:text-[#8B1E1E] transition-colors py-2 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#D4A017] after:absolute after:bottom-0 after:left-0 after:transition-all"
+          >
+            Katchi (காட்சி)
+          </Link>
+          <Link
             href="/about"
             className="hover:text-[#8B1E1E] transition-colors py-2 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#D4A017] after:absolute after:bottom-0 after:left-0 after:transition-all"
           >
@@ -105,6 +111,13 @@ export default function Header() {
               className="py-2 border-b border-[#F7EDD8] hover:text-[#8B1E1E]"
             >
               மாவட்டங்கள்
+            </Link>
+            <Link
+              href="/map"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 border-b border-[#F7EDD8] hover:text-[#8B1E1E]"
+            >
+              Katchi (காட்சி)
             </Link>
             <Link
               href="/about"
