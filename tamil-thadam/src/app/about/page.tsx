@@ -1,6 +1,6 @@
 // src/app/about/page.tsx
 import Link from "next/link";
-import OrnamentDivider from "@/components/OrnamentDivider";
+import Icon from "@/components/Icon";
 
 export const metadata = {
   title: "எங்களைப் பற்றி — தமிழ்த் தடம்",
@@ -20,8 +20,6 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <OrnamentDivider />
-
       {/* Narrative Section */}
       <div className="manuscript-card my-10 p-6 sm:p-10">
         <h2 className="text-xl sm:text-2xl font-bold text-[#8B1E1E] mb-4">
@@ -38,7 +36,7 @@ export default function AboutPage() {
       {/* 3 Pillars Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 my-10">
         <div className="manuscript-card text-center p-6">
-          <span className="text-4xl block mb-3">🎙</span>
+          <Icon name="mic" className="mx-auto mb-3 h-8 w-8 text-[#8B1E1E]" />
           <h3 className="text-lg font-bold text-[#8B1E1E] mb-2">1. எளிய குரல் பதிவு</h3>
           <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
             முதியவர்களும் எளிதாகப் பேசும் வகையில் எளிய வினாக்களுடன் கூடிய ஒரு-தொடு ஒலிப்பதிவு கருவி.
@@ -46,7 +44,7 @@ export default function AboutPage() {
         </div>
 
         <div className="manuscript-card text-center p-6">
-          <span className="text-4xl block mb-3">⚡</span>
+          <Icon name="sparkles" className="mx-auto mb-3 h-8 w-8 text-[#8B1E1E]" />
           <h3 className="text-lg font-bold text-[#8B1E1E] mb-2">2. தமிழ் AI பகுப்பாய்வு</h3>
           <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
             Sarvam AI மூலம் துல்லியமான தமிழ் ஒலி-எழுத்துப் பெயர்ப்பு மற்றும் Gemini AI மூலம் உடனடி சுருக்கம்.
@@ -54,7 +52,7 @@ export default function AboutPage() {
         </div>
 
         <div className="manuscript-card text-center p-6">
-          <span className="text-4xl block mb-3">🏛</span>
+          <Icon name="archive" className="mx-auto mb-3 h-8 w-8 text-[#8B1E1E]" />
           <h3 className="text-lg font-bold text-[#8B1E1E] mb-2">3. மக்கள் காப்பகம்</h3>
           <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
             எல்லா மாவட்டங்கள், பண்பாட்டுக் களங்கள் மற்றும் ஆய்வாளர்களுக்குப் பயன்படும் நிரந்தர வரலாற்று ஆவணம்.
@@ -96,12 +94,11 @@ export default function AboutPage() {
           அவர்களின் ஒரு கதையும், ஒரு வாழ்க்கை அனுபவமும் வருங்கால தமிழ் மண்ணிற்கு விலைமதிப்பற்ற சொத்து.
         </p>
         <Link href="/record" className="stamp-btn-primary !text-lg !py-3.5 !px-8">
-          <span>🎙</span>
+          <Icon name="mic" className="h-5 w-5" />
           <span>இப்போது பதிவு செய்யுங்கள்</span>
         </Link>
       </div>
 
-      <OrnamentDivider />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 // src/app/mission/page.tsx
 import Link from "next/link";
-import OrnamentDivider from "@/components/OrnamentDivider";
+import Icon from "@/components/Icon";
 
 export const metadata = {
   title: "திட்ட நோக்கம் & தொலைநோக்குப் பார்வை — தமிழ்த் தடம்",
@@ -15,7 +15,7 @@ export default function MissionPage() {
           ========================================================================= */}
       <div className="text-center mb-10">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4A017] bg-[#FDF1D0]/70 text-[#8B1E1E] text-xs sm:text-sm font-semibold mb-4 shadow-2xs">
-          <span>📜</span>
+          <Icon name="target" className="h-4 w-4" />
           <span>Project Vision &amp; Mission · திட்ட நோக்கம்</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-bold text-[#8B1E1E] mb-3 tracking-tight">
@@ -26,15 +26,13 @@ export default function MissionPage() {
         </p>
       </div>
 
-      <OrnamentDivider symbols="✦ ❋ ✺ ❋ ✦" />
-
       {/* =========================================================================
           SECTION 1 — தொலைநோக்குப் பார்வை (OUR MISSION)
           ========================================================================= */}
       <section className="my-10">
         <div className="manuscript-card p-6 sm:p-10 border-2 border-[#D4A017]/70 shadow-sm bg-gradient-to-b from-[#FFFDF7] to-[#FDF8EE]">
           <div className="flex items-center gap-2.5 mb-4">
-            <span className="text-2xl">🎯</span>
+            <Icon name="target" className="h-6 w-6 shrink-0 text-[#8B1E1E]" />
             <h2 className="text-2xl sm:text-3xl font-bold text-[#8B1E1E]">
               1. எங்கள் முதன்மை நோக்கம் (Our Mission)
             </h2>
@@ -46,7 +44,10 @@ export default function MissionPage() {
 
           <div className="mt-6 p-4 rounded-xl bg-[#F7EDD8]/60 border border-[#D9C9A8] text-sm text-[#7A6A55] leading-relaxed">
             <span className="font-bold text-[#8B1E1E] block mb-1">
-              🌐 Executive Summary:
+              <span className="inline-flex items-center gap-2">
+                <Icon name="globe" className="h-4 w-4" />
+                Executive Summary:
+              </span>
             </span>
             <p className="italic">
               Tamil Thadam is an AI-powered cultural archive dedicated to preserving Tamil oral history. Before our elders&apos; memories, wisdom, and folklore vanish with time, we provide an accessible platform to record, transcribe, index, and permanently archive their voices for future generations and research.
@@ -160,8 +161,6 @@ export default function MissionPage() {
         </div>
       </section>
 
-      <OrnamentDivider symbols="✦ ❋ ✦" />
-
       {/* =========================================================================
           SECTION 3 — AI தீர்வு (OUR 6-STEP AI SOLUTION)
           ========================================================================= */}
@@ -180,7 +179,7 @@ export default function MissionPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div className="manuscript-card p-5 border-t-4 border-t-[#8B1E1E]">
-            <div className="text-2xl mb-2">🎙️</div>
+            <Icon name="mic" className="mb-2 h-6 w-6 text-[#8B1E1E]" />
             <h4 className="font-bold text-[#8B1E1E] text-base mb-1">1. எளிய குரல் பதிவு</h4>
             <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
               முதியவர்கள் எளிதாகப் பேச 30+ வழிகாட்டும் வினாக்களுடன் கூடிய ஒரு-தொடு ஒலிப்பதிவு இடைமுகம்.
@@ -188,7 +187,7 @@ export default function MissionPage() {
           </div>
 
           <div className="manuscript-card p-5 border-t-4 border-t-[#D4A017]">
-            <div className="text-2xl mb-2">⚡</div>
+            <Icon name="sparkles" className="mb-2 h-6 w-6 text-[#8B1E1E]" />
             <h4 className="font-bold text-[#8B1E1E] text-base mb-1">2. Sarvam AI எழுத்துப்பதிவு</h4>
             <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
               Saarika v2.5 தமிழ் ASR மூலம் பேச்சு ஒலி துல்லியமான நேர முத்திரைகளுடன் (Timestamps) உரையாக மாற்றப்படுகிறது.
@@ -196,7 +195,7 @@ export default function MissionPage() {
           </div>
 
           <div className="manuscript-card p-5 border-t-4 border-t-[#8B1E1E]">
-            <div className="text-2xl mb-2">🤖</div>
+            <Icon name="sparkles" className="mb-2 h-6 w-6 text-[#8B1E1E]" />
             <h4 className="font-bold text-[#8B1E1E] text-base mb-1">3. Gemini AI சுருக்கம்</h4>
             <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
               முக்கிய பண்பாட்டுக் குறிச்சொற்கள், மனிதர்கள், இடங்கள் மற்றும் சுருக்கமான உரை தானாக உருவாக்கப்படுகிறது.
@@ -204,7 +203,7 @@ export default function MissionPage() {
           </div>
 
           <div className="manuscript-card p-5 border-t-4 border-t-[#D4A017]">
-            <div className="text-2xl mb-2">🗺️</div>
+            <Icon name="map" className="mb-2 h-6 w-6 text-[#8B1E1E]" />
             <h4 className="font-bold text-[#8B1E1E] text-base mb-1">4. புலம் &amp; மாவட்ட வகைப்பாடு</h4>
             <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
               38 தமிழ்நாடு மாவட்டங்கள் மற்றும் 8 பண்பாட்டுப் புலங்கள் வாரியாக வரிசைப்படுத்தப்பட்டு வரைபடத்தில் காட்டப்படுகிறது.
@@ -212,7 +211,7 @@ export default function MissionPage() {
           </div>
 
           <div className="manuscript-card p-5 border-t-4 border-t-[#8B1E1E]">
-            <div className="text-2xl mb-2">🔍</div>
+            <Icon name="search" className="mb-2 h-6 w-6 text-[#8B1E1E]" />
             <h4 className="font-bold text-[#8B1E1E] text-base mb-1">5. முழு உரைத் தேடல்</h4>
             <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
               எந்தவொரு தமிழ் சொல்லையும் தட்டச்சு செய்து குறிப்பிட்ட கதை மற்றும் ஒலித்துண்டைக் கணப்பொழுதில் கண்டறியலாம்.
@@ -220,7 +219,7 @@ export default function MissionPage() {
           </div>
 
           <div className="manuscript-card p-5 border-t-4 border-t-[#D4A017]">
-            <div className="text-2xl mb-2">🏛️</div>
+            <Icon name="archive" className="mb-2 h-6 w-6 text-[#8B1E1E]" />
             <h4 className="font-bold text-[#8B1E1E] text-base mb-1">6. நிரந்தரக் காப்பகம்</h4>
             <p className="text-xs sm:text-sm text-[#7A6A55] leading-relaxed">
               Supabase மேகக் காப்பகத்தில் அனைத்துக் குரல்களும் அடுத்த தலைமுறை ஆய்வுகளுக்காகப் பாதுகாப்பாகச் சேமிக்கப்படுகின்றன.
@@ -245,7 +244,7 @@ export default function MissionPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="manuscript-card p-6">
             <h3 className="text-base sm:text-lg font-bold text-[#8B1E1E] mb-2 flex items-center gap-2">
-              <span>🌱</span>
+              <Icon name="leaf" className="h-4 w-4 shrink-0 text-[#2D6A4F]" />
               <span>கலாச்சாரப் பாதுகாப்பு (Cultural Heritage)</span>
             </h3>
             <p className="text-sm text-[#2B1810] leading-relaxed">
@@ -255,7 +254,7 @@ export default function MissionPage() {
 
           <div className="manuscript-card p-6">
             <h3 className="text-base sm:text-lg font-bold text-[#8B1E1E] mb-2 flex items-center gap-2">
-              <span>🌱</span>
+              <Icon name="leaf" className="h-4 w-4 shrink-0 text-[#2D6A4F]" />
               <span>நாட்டுப்புற அறிவியல் &amp; ஆராய்ச்சி (Indigenous Knowledge)</span>
             </h3>
             <p className="text-sm text-[#2B1810] leading-relaxed">
@@ -265,7 +264,7 @@ export default function MissionPage() {
 
           <div className="manuscript-card p-6">
             <h3 className="text-base sm:text-lg font-bold text-[#8B1E1E] mb-2 flex items-center gap-2">
-              <span>🌱</span>
+              <Icon name="users" className="h-4 w-4 shrink-0 text-[#2D6A4F]" />
               <span>குடும்ப அடையாளம் &amp; வேர்கள் (Generational Connection)</span>
             </h3>
             <p className="text-sm text-[#2B1810] leading-relaxed">
@@ -275,7 +274,7 @@ export default function MissionPage() {
 
           <div className="manuscript-card p-6">
             <h3 className="text-base sm:text-lg font-bold text-[#8B1E1E] mb-2 flex items-center gap-2">
-              <span>🌱</span>
+              <Icon name="globe" className="h-4 w-4 shrink-0 text-[#2D6A4F]" />
               <span>இணையத்தில் தமிழின் தடம் (Digital Tamil Content)</span>
             </h3>
             <p className="text-sm text-[#2B1810] leading-relaxed">
@@ -351,25 +350,37 @@ export default function MissionPage() {
               <tr>
                 <td className="py-3.5 px-4 sm:px-6 text-[#7A6A55]">ஆடியோவின் குறிப்பிட்ட உரையைத் தேட முடிவதில்லை</td>
                 <td className="py-3.5 px-4 sm:px-6 font-semibold text-[#8B1E1E] bg-[#FFFDF7]">
-                  ✅ முழு உரைத் தமிழ் தேடல் மற்றும் நேர முத்திரை தாவல்
+                  <span className="inline-flex items-center gap-1.5">
+                    <Icon name="check" className="h-4 w-4" />
+                    முழு உரைத் தமிழ் தேடல் மற்றும் நேர முத்திரை தாவல்
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td className="py-3.5 px-4 sm:px-6 text-[#7A6A55]">பதிவுகள் காலப்போக்கில் அழிந்துவிடும் அபாயம்</td>
                 <td className="py-3.5 px-4 sm:px-6 font-semibold text-[#8B1E1E] bg-[#FFFDF7]">
-                  ✅ நிரந்தர மேக வரலாற்று ஆவணம்
+                  <span className="inline-flex items-center gap-1.5">
+                    <Icon name="check" className="h-4 w-4" />
+                    நிரந்தர மேக வரலாற்று ஆவணம்
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td className="py-3.5 px-4 sm:px-6 text-[#7A6A55]">வகைப்படுத்தல் இல்லை</td>
                 <td className="py-3.5 px-4 sm:px-6 font-semibold text-[#8B1E1E] bg-[#FFFDF7]">
-                  ✅ மாவட்டம் மற்றும் பண்பாட்டுப் புலம் வாரியான கட்டமைப்பு
+                  <span className="inline-flex items-center gap-1.5">
+                    <Icon name="check" className="h-4 w-4" />
+                    மாவட்டம் மற்றும் பண்பாட்டுப் புலம் வாரியான கட்டமைப்பு
+                  </span>
                 </td>
               </tr>
               <tr>
                 <td className="py-3.5 px-4 sm:px-6 text-[#7A6A55]">ஆங்கிலத்தை மையமாகக் கொண்ட பொதுவான வடிவமைப்பு</td>
                 <td className="py-3.5 px-4 sm:px-6 font-semibold text-[#8B1E1E] bg-[#FFFDF7]">
-                  ✅ தமிழுக்காகவே பிரத்யேகமாக உருவாக்கப்பட்ட கலை வடிவம்
+                  <span className="inline-flex items-center gap-1.5">
+                    <Icon name="check" className="h-4 w-4" />
+                    தமிழுக்காகவே பிரத்யேகமாக உருவாக்கப்பட்ட கலை வடிவம்
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -382,7 +393,7 @@ export default function MissionPage() {
           ========================================================================= */}
       <section className="my-14">
         <div className="manuscript-card text-center p-8 sm:p-12 bg-gradient-to-b from-[#FFFDF7] via-[#FDF8EE] to-[#F7EDD8] border-2 border-[#D4A017] shadow-md">
-          <span className="text-4xl block mb-3">🎙️</span>
+          <Icon name="mic" className="mx-auto mb-3 h-8 w-8 text-[#8B1E1E]" />
           <h3 className="text-2xl sm:text-3xl font-bold text-[#8B1E1E] mb-3">
             உங்கள் மூத்தவர்களின் குரலையும் ஆவணப்படுத்துங்கள்
           </h3>
@@ -391,7 +402,7 @@ export default function MissionPage() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link href="/record" className="stamp-btn-primary !text-lg !py-3.5 !px-8 shadow-sm">
-              <span>🎙</span>
+              <Icon name="mic" className="h-5 w-5" />
               <span>இப்போதே கதை பதிவு செய்ய</span>
             </Link>
             <Link href="/browse" className="stamp-btn-outline !text-lg !py-3.5 !px-8">
@@ -402,7 +413,6 @@ export default function MissionPage() {
         </div>
       </section>
 
-      <OrnamentDivider symbols="✦ ❋ ✺ ❋ ✦" />
     </div>
   );
 }

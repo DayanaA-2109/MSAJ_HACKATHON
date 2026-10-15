@@ -3,7 +3,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import KolamStrip from "./KolamStrip";
 import { stopAllAudio } from "@/lib/audio-manager";
 
 export default function Header() {
@@ -82,9 +81,6 @@ export default function Header() {
           )}
         </button>
       </div>
-
-      {/* Kolam Strip under header */}
-      <KolamStrip />
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (

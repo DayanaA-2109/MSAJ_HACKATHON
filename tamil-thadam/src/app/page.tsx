@@ -4,10 +4,8 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import OrnamentDivider from "@/components/OrnamentDivider";
 import PulamBar from "@/components/PulamBar";
 import StoryCard from "@/components/StoryCard";
-import KolamStrip from "@/components/KolamStrip";
 import { INITIAL_STORIES, DISTRICTS, Story } from "@/data/mock-stories";
 
 export default function HomePage() {
@@ -59,11 +57,6 @@ export default function HomePage() {
           SECTION 1 — ANIMATED HERO (68vh height)
           ========================================================================= */}
       <section className="relative min-h-[68vh] flex flex-col justify-center items-center text-center overflow-hidden px-4 sm:px-6 py-16 bg-[#2B1810]">
-        {/* Kolam strip across the top */}
-        <div className="absolute top-0 left-0 right-0 z-20">
-          <KolamStrip />
-        </div>
-
         {/* Hero Background with Darkening & Warm Radial Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -76,13 +69,10 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#2B1810] via-[#2B1810]/70 to-[#8B1E1E]/40" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,160,23,0.18)_0%,transparent_75%)]" />
         </div>
-
-
-
         {/* Content Container */}
         <div className="relative z-20 max-w-4xl mx-auto flex flex-col items-center">
           {/* Eyebrow Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4A017]/80 bg-[#D4A017]/10 backdrop-blur-sm text-[#F5D98B] text-xs sm:text-sm font-semibold mb-6 shadow-sm">
+          <div className="mb-6 text-sm font-semibold tracking-wide text-[#F5D98B]">
             <span>தமிழ் வாய்மொழி காப்பகம்</span>
           </div>
 
@@ -116,19 +106,13 @@ export default function HomePage() {
           </div>
 
           {/* Stat Pills */}
-          <div className="flex items-center gap-4">
-            <div className="px-4 py-1.5 rounded-full bg-[#FFFDF7]/15 border border-[#D9C9A8]/30 backdrop-blur-sm text-[#F5D98B] text-xs sm:text-sm font-semibold">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="px-4 py-1.5 border-l-2 border-[#D4A017] text-[#FDF8EE] text-sm">
               {stories.length} கதைகள்
             </div>
-            <div className="px-4 py-1.5 rounded-full bg-[#FFFDF7]/15 border border-[#D9C9A8]/30 backdrop-blur-sm text-[#F5D98B] text-xs sm:text-sm font-semibold">
+            <div className="px-4 py-1.5 border-l-2 border-[#D4A017] text-[#FDF8EE] text-sm">
               {DISTRICTS.length} மாவட்டங்கள்
             </div>
-          </div>
-
-          {/* Scroll Hint */}
-          <div className="mt-10 text-xs sm:text-sm text-[#FDF8EE]/70 flex items-center gap-2 animate-bounce">
-            <span>கீழே உருட்டுங்கள்</span>
-            <span>↓</span>
           </div>
         </div>
       </section>
@@ -137,7 +121,7 @@ export default function HomePage() {
           SECTION 2 — PULAM (Domain) CHIPS
           ========================================================================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 w-full">
-        <OrnamentDivider symbols="✦ ❋ புலம் வாரியாக ❋ ✦" />
+        <h2 className="mb-5 text-xl font-bold text-[#2B1810]">புலம் வாரியாக</h2>
         <PulamBar />
       </section>
 
@@ -207,7 +191,10 @@ export default function HomePage() {
           SECTION 4 — DISTRICTS
           ========================================================================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 w-full">
-        <OrnamentDivider symbols="✦ ❋ மாவட்டங்கள் ❋ ✦" />
+        <div className="mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#8B1E1E]">மாவட்டங்கள்</h2>
+          <p className="mt-1 text-sm text-[#7A6A55]">மாவட்டம் வாரியாக வாய்மொழிக் கதைகளைத் தேடுங்கள்</p>
+        </div>
 
         <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           {DISTRICTS.map((d) => (
@@ -232,8 +219,6 @@ export default function HomePage() {
           SECTION 5 — திட்ட நோக்கம் & நாம் தீர்க்கும் பிரச்சினைகள் (PROJECT VISION & PROBLEMS)
           ========================================================================= */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12 w-full">
-        <OrnamentDivider symbols="✦ ❋ திட்ட நோக்கம் ❋ ✦" />
-
         <div className="manuscript-card p-6 sm:p-10 border-2 border-[#D4A017]/70 shadow-md my-4 bg-gradient-to-b from-[#FFFDF7] to-[#FDF8EE]">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8B1E1E]/10 text-[#8B1E1E] text-xs font-bold uppercase tracking-wider mb-2">
