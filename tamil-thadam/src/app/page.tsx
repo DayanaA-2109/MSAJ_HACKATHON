@@ -77,19 +77,12 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,160,23,0.18)_0%,transparent_75%)]" />
         </div>
 
-        {/* Floating Ornaments */}
-        <div className="absolute inset-0 z-10 pointer-events-none overflow-hidden">
-          <span className="absolute top-12 left-10 text-2xl text-[#D4A017]/40 animate-floating">✦</span>
-          <span className="absolute top-24 right-16 text-3xl text-[#F5D98B]/30 animate-floating" style={{ animationDelay: "1.5s" }}>❋</span>
-          <span className="absolute bottom-20 left-16 text-2xl text-[#D4A017]/35 animate-floating" style={{ animationDelay: "2.5s" }}>✺</span>
-          <span className="absolute bottom-24 right-20 text-3xl text-[#F5D98B]/25 animate-floating" style={{ animationDelay: "3.5s" }}>❁</span>
-        </div>
+
 
         {/* Content Container */}
         <div className="relative z-20 max-w-4xl mx-auto flex flex-col items-center">
           {/* Eyebrow Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#D4A017]/80 bg-[#D4A017]/10 backdrop-blur-sm text-[#F5D98B] text-xs sm:text-sm font-semibold mb-6 shadow-sm">
-            <span>🪔</span>
             <span>தமிழ் வாய்மொழி காப்பகம்</span>
           </div>
 
@@ -111,7 +104,6 @@ export default function HomePage() {
               href="/record"
               className="stamp-btn-primary w-full sm:w-auto !py-3.5 !px-8 !text-lg"
             >
-              <span>🎙</span>
               <span>இப்போது பதிவு செய்யுங்கள்</span>
             </Link>
 
@@ -165,7 +157,7 @@ export default function HomePage() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="🔍 தேடு — தலைப்பு, விளக்கம், குறிச்சொல்"
+              placeholder="தேடு — தலைப்பு, விளக்கம், குறிச்சொல்"
               className="w-full px-4 py-2.5 rounded-xl bg-[#FFFDF7] border border-[#D9C9A8] text-sm text-[#2B1810] focus:border-[#8B1E1E] focus:outline-none focus:ring-1 focus:ring-[#8B1E1E] placeholder:text-[#7A6A55]/70"
             />
             {searchQuery && (
@@ -189,7 +181,6 @@ export default function HomePage() {
           </div>
         ) : (
           <div className="manuscript-card text-center py-12 my-6">
-            <span className="text-4xl block mb-3">📜</span>
             <h3 className="text-xl font-bold text-[#8B1E1E] mb-2">கதைகள் எதுவும் கிடைக்கவில்லை</h3>
             <p className="text-sm text-[#7A6A55] mb-4">
               &quot;{searchQuery}&quot; என்ற சொல்லுக்குப் பொருத்தமான கதைகள் இல்லை.
@@ -225,7 +216,7 @@ export default function HomePage() {
               href={`/districts/${d.slug}`}
               className="px-5 py-2.5 rounded-full bg-[#FFFDF7] border border-[#D9C9A8] hover:border-[#8B1E1E] hover:bg-[#FDF1D0] font-semibold text-[#2B1810] text-sm transition-all shadow-sm"
             >
-              📍 {d.name_ta}
+              {d.name_ta}
             </Link>
           ))}
           <Link
@@ -246,7 +237,7 @@ export default function HomePage() {
         <div className="manuscript-card p-6 sm:p-10 border-2 border-[#D4A017]/70 shadow-md my-4 bg-gradient-to-b from-[#FFFDF7] to-[#FDF8EE]">
           <div className="text-center max-w-3xl mx-auto mb-8">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8B1E1E]/10 text-[#8B1E1E] text-xs font-bold uppercase tracking-wider mb-2">
-              📜 திட்ட நோக்கம் · Project Vision &amp; Problem
+              திட்ட நோக்கம் · Project Vision &amp; Problem
             </div>
             <h2 className="text-2xl sm:text-4xl font-bold text-[#8B1E1E] mb-3">
               நாம் தீர்க்கும் 4 முக்கியப் பிரச்சினைகள்
@@ -260,7 +251,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
             <div className="p-5 rounded-xl bg-[#FFFDF7] border-l-4 border-l-[#8B1E1E] border border-[#D9C9A8]/80 shadow-2xs">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">🔴</span>
                 <h3 className="font-bold text-[#8B1E1E] text-base">பிரச்சினை 1 — மறையும் மொழி அறிவு</h3>
               </div>
               <p className="text-xs sm:text-sm text-[#2B1810] leading-relaxed">
@@ -270,7 +260,6 @@ export default function HomePage() {
 
             <div className="p-5 rounded-xl bg-[#FFFDF7] border-l-4 border-l-[#D4A017] border border-[#D9C9A8]/80 shadow-2xs">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">🔴</span>
                 <h3 className="font-bold text-[#8B1E1E] text-base">பிரச்சினை 2 — இளைய தலைமுறை இணைப்பு இல்லை</h3>
               </div>
               <p className="text-xs sm:text-sm text-[#2B1810] leading-relaxed">
@@ -280,7 +269,6 @@ export default function HomePage() {
 
             <div className="p-5 rounded-xl bg-[#FFFDF7] border-l-4 border-l-[#8B1E1E] border border-[#D9C9A8]/80 shadow-2xs">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">🔴</span>
                 <h3 className="font-bold text-[#8B1E1E] text-base">பிரச்சினை 3 — டிஜிட்டல் பாதுகாப்பு இல்லை</h3>
               </div>
               <p className="text-xs sm:text-sm text-[#2B1810] leading-relaxed">
@@ -290,7 +278,6 @@ export default function HomePage() {
 
             <div className="p-5 rounded-xl bg-[#FFFDF7] border-l-4 border-l-[#D4A017] border border-[#D9C9A8]/80 shadow-2xs">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-xl">🔴</span>
                 <h3 className="font-bold text-[#8B1E1E] text-base">பிரச்சினை 4 — வட்டார வழக்குகள் அழிகின்றன</h3>
               </div>
               <p className="text-xs sm:text-sm text-[#2B1810] leading-relaxed">
@@ -312,7 +299,7 @@ export default function HomePage() {
               href="/record"
               className="stamp-btn-outline !py-2.5 !px-6 text-sm sm:text-base"
             >
-              <span>🎙 புதிய கதை பதிவு செய்ய</span>
+              <span>புதிய கதை பதிவு செய்ய</span>
             </Link>
           </div>
         </div>
