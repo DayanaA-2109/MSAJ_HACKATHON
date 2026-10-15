@@ -22,7 +22,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-7 font-semibold text-[#2B1810]">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6 font-semibold text-[#2B1810] whitespace-nowrap">
           <Link
             href="/"
             onClick={stopAllAudio}
@@ -35,6 +35,12 @@ export default function Header() {
             className="hover:text-[#8B1E1E] transition-colors py-2 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#D4A017] after:absolute after:bottom-0 after:left-0 after:transition-all"
           >
             உலாவு
+          </Link>
+          <Link
+            href="/neirkaanal"
+            className="hover:text-[#8B1E1E] transition-colors py-2 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#D4A017] after:absolute after:bottom-0 after:left-0 after:transition-all"
+          >
+            Neirkaanal (நேர்காணல்)
           </Link>
           <Link
             href="/districts"
@@ -102,6 +108,13 @@ export default function Header() {
               className="py-2 border-b border-[#F7EDD8] hover:text-[#8B1E1E]"
             >
               உலாவு
+            </Link>
+            <Link
+              href="/neirkaanal"
+              onClick={() => setMobileMenuOpen(false)}
+              className="py-2 border-b border-[#F7EDD8] hover:text-[#8B1E1E]"
+            >
+              Neirkaanal (நேர்காணல்)
             </Link>
             <Link
               href="/districts"
