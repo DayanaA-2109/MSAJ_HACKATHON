@@ -40,7 +40,7 @@ export default function Header() {
             href="/neirkaanal"
             className="hover:text-[#8B1E1E] transition-colors py-2 relative hover:after:w-full after:w-0 after:h-[2px] after:bg-[#D4A017] after:absolute after:bottom-0 after:left-0 after:transition-all"
           >
-            Neirkaanal (நேர்காணல்)
+            நேர்காணல்
           </Link>
           <Link
             href="/districts"
@@ -114,7 +114,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="py-2 border-b border-[#F7EDD8] hover:text-[#8B1E1E]"
             >
-              Neirkaanal (நேர்காணல்)
+              நேர்காணல்
             </Link>
             <Link
               href="/districts"
