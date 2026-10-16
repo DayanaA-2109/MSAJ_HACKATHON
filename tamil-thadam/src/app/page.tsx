@@ -4,7 +4,6 @@
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import PulamBar from "@/components/PulamBar";
 import StoryCard from "@/components/StoryCard";
 import { INITIAL_STORIES, DISTRICTS, Story } from "@/data/mock-stories";
@@ -272,96 +271,31 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Thirukkural — audit-style scan reveal */}
-          <motion.blockquote
-            className="relative max-w-2xl mx-auto my-10 px-4 sm:px-8 py-8 text-center overflow-hidden rounded-2xl border border-[#D9C9A8]/80 bg-[#FFFDF7]/80"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.55 }}
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.18, delayChildren: 0.1 } },
-            }}
-          >
+          {/* Thirukkural — static (no animation) */}
+          <blockquote className="relative max-w-2xl mx-auto my-10 px-4 sm:px-8 py-8 text-center overflow-hidden rounded-2xl border border-[#D9C9A8]/80 bg-[#FFFDF7]/80">
             {/* Soft radial wash */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,160,23,0.12)_0%,transparent_70%)]"
             />
 
-            {/* Audit scan beam */}
-            <motion.div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-y-0 left-0 w-[28%] max-w-[140px] bg-gradient-to-r from-transparent via-[#D4A017]/40 to-transparent blur-sm"
-              variants={{
-                hidden: { x: "-120%", opacity: 0 },
-                visible: {
-                  x: "420%",
-                  opacity: [0, 1, 1, 0],
-                  transition: { duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.12 },
-                },
-              }}
-            />
-
-            <motion.p
-              className="relative text-[11px] sm:text-xs font-bold tracking-[0.22em] uppercase text-[#8B1E1E]/80 mb-4"
-              variants={{
-                hidden: { opacity: 0, y: 10, filter: "blur(6px)" },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-                },
-              }}
-            >
+            <p className="relative text-[11px] sm:text-xs font-bold tracking-[0.22em] uppercase text-[#8B1E1E]/80 mb-4">
               திருக்குறள் · 423
-            </motion.p>
+            </p>
 
-            <motion.p
-              className="brand-tamil relative text-lg sm:text-2xl leading-relaxed text-[#2B1810] mb-2"
-              variants={{
-                hidden: { opacity: 0, y: 18, filter: "blur(8px)" },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-                },
-              }}
-            >
+            <p className="brand-tamil relative text-lg sm:text-2xl leading-relaxed text-[#2B1810] mb-2">
               எப்பொருள் யார்யார்வாய்க் கேட்பினும் அப்பொருள்
-            </motion.p>
-            <motion.p
-              className="brand-tamil relative text-lg sm:text-2xl leading-relaxed text-[#2B1810]"
-              variants={{
-                hidden: { opacity: 0, y: 18, filter: "blur(8px)" },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-                },
-              }}
-            >
+            </p>
+            <p className="brand-tamil relative text-lg sm:text-2xl leading-relaxed text-[#2B1810]">
               மெய்ப்பொருள் காண்ப தறிவு.
-            </motion.p>
+            </p>
 
-            {/* Underline draw — “checked” accent */}
-            <motion.span
+            {/* Gold underline accent */}
+            <span
               aria-hidden="true"
               className="relative mx-auto mt-6 block h-[2px] w-24 rounded-full bg-[#D4A017]"
-              variants={{
-                hidden: { scaleX: 0, opacity: 0 },
-                visible: {
-                  scaleX: 1,
-                  opacity: 1,
-                  transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.35 },
-                },
-              }}
-              style={{ originX: 0.5 }}
             />
-          </motion.blockquote>
+          </blockquote>
 
           {/* Action Row */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4 border-t border-[#D9C9A8]/70">

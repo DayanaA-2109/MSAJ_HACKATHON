@@ -149,7 +149,7 @@ async function tracksFromWatchPage(videoId: string): Promise<CaptionTrack[]> {
   });
   if (!res.ok) return [];
   const html = await res.text();
-  const match = html.match(/ytInitialPlayerResponse\s*=\s*(\{.+?\});/s);
+  const match = html.match(/ytInitialPlayerResponse\s*=\s*(\{[\s\S]+?\});/);
   if (!match) return [];
   try {
     const json = JSON.parse(match[1]);

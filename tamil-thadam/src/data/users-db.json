@@ -1,0 +1,46 @@
+[
+  {
+    "id": "7bea1341-6c35-47f9-a43d-c1fc8476b902",
+    "email": "demo@tamilthadam.org",
+    "username": "demo",
+    "name": "ஆய்வாளர் (Admin)",
+    "role": "admin",
+    "createdAt": "2026-10-16T04:51:29.419Z",
+    "salt": "7a98f4d8119ece72843678e08a3606ad",
+    "passwordHash": "5942582145bf8b33c3eff591fa79dbf5155c1a5273d72eea562ab07a0903e10122a3e1731e8b2fe3bc42a21b36d3f48e07ab7fd2a19506df858703fe48811352",
+    "lastLoginAt": "2026-10-16T05:53:49.672Z"
+  },
+  {
+    "id": "35ea2b14-0c99-41a2-a18f-e032267f7f4e",
+    "email": "teenasheeba@gmail.com",
+    "username": "teenasheeba",
+    "name": "teena",
+    "role": "contributor",
+    "createdAt": "2026-10-16T05:03:27.252Z",
+    "lastLoginAt": "2026-10-16T05:03:27.252Z",
+    "salt": "8ceb89559fb56cabb97d6dee5fe5b5f7",
+    "passwordHash": "aa86c19d8b6178c8b6d0123381613959f71fac27be8b8084d0e0c7b32d391867a81834e09221d7da61a6adfb335d98e35828d1b0aabd9d3ac43868ed284d662d"
+  },
+  {
+    "id": "f9cbcc0e-c681-4857-a4f5-2ab54af760a0",
+    "email": "researcher_1792127370218@gmail.com",
+    "username": "researcher_1792127370218",
+    "name": "பேராசிரியர் கயல்விழி",
+    "role": "researcher",
+    "createdAt": "2026-10-16T05:09:30.630Z",
+    "lastLoginAt": "2026-10-16T05:09:30.630Z",
+    "salt": "c3ea3d93eb63dbe51b1b8656055558cc",
+    "passwordHash": "85be51e8b69fe88f35d152bb409fe31f4c3a59939faf9ee154c7e4f37db306b3f3aea88db97987f18838711d99eae4c377f1aee08517ded053e44cd7e13326ae"
+  },
+  {
+    "id": "41dff46b-78be-4c4e-999b-4b0beaf66984",
+    "email": "researcher_1792127756192@gmail.com",
+    "username": "researcher_1792127756192",
+    "name": "பேராசிரியர் கயல்விழி",
+    "role": "researcher",
+    "createdAt": "2026-10-16T05:15:56.488Z",
+    "lastLoginAt": "2026-10-16T05:15:56.488Z",
+    "salt": "55c9b338491d4d64dd02bdaa5be95c82",
+    "passwordHash": "f96021e90fe1d580726feec254eb5931175d93b9ed2b9d53344b319617468db521680b399d2514663991fbd6307e6ec03e03e37819f54687c1fbd81a2de3f6fe"
+  }
+]
