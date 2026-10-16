@@ -195,10 +195,13 @@ async function geminiSummary(transcript: string): Promise<string | null> {
   if (!key) return null;
 
   const genAI = new GoogleGenerativeAI(key);
-  const model = genAI.getGenerativeModel({
-    model: "gemini-3.8-flash",
-    generationConfig: { temperature: 0.3 },
-  });
+  const models = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-flash-latest",
+    "gemini-3.8-flash",
+    "gemini-1.5-flash",
+  ];
 
   const prompt = `Write a concise summary of the following interview transcript.
 Rules:
@@ -210,9 +213,22 @@ Rules:
 Transcript:
 ${transcript.slice(0, 24000)}`;
 
-  const result = await model.generateContent(prompt);
-  const text = result.response.text().trim();
-  return text || null;
+  let lastError: Error | null = null;
+  for (const modelName of models) {
+    try {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        generationConfig: { temperature: 0.3 },
+      });
+      const result = await model.generateContent(prompt);
+      const text = result.response.text().trim();
+      if (text) return text;
+    } catch (err) {
+      lastError = err as Error;
+    }
+  }
+  if (lastError) throw lastError;
+  return null;
 }
 
 async function main() {

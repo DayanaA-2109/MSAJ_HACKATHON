@@ -10,19 +10,23 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#FDF8EE]/95 backdrop-blur-md border-b border-[#D9C9A8]">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
-        {/* Brand */}
-        <Link href="/" onClick={stopAllAudio} className="flex flex-col group">
-          <span className="text-2xl sm:text-3xl font-bold tracking-tight text-[#8B1E1E] group-hover:text-[#6B1414] transition-colors">
+      <div className="w-full max-w-[90rem] mx-auto pl-3 pr-4 sm:pl-4 sm:pr-6 min-h-20 py-3 flex items-center justify-between gap-4 overflow-visible">
+        {/* Brand — tighter to the left, display serif for presence */}
+        <Link
+          href="/"
+          onClick={stopAllAudio}
+          className="flex flex-col items-start justify-center gap-0.5 shrink-0 min-w-0 group"
+        >
+          <span className="brand-tamil text-2xl sm:text-3xl lg:text-[2.15rem] leading-normal text-[#8B1E1E] group-hover:text-[#6B1414] transition-colors whitespace-nowrap">
             தமிழ்த் தடம்
           </span>
-          <span className="text-xs sm:text-sm font-medium text-[#7A6A55] tracking-wide">
+          <span className="text-[11px] sm:text-xs lg:text-sm font-medium leading-snug text-[#7A6A55] whitespace-nowrap">
             வாய்மொழி வரலாற்றுக் காப்பகம்
           </span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4 lg:gap-6 font-semibold text-[#2B1810] whitespace-nowrap">
+        <nav className="hidden md:flex items-center gap-3 lg:gap-5 font-semibold text-[#2B1810] whitespace-nowrap shrink min-w-0">
           <Link
             href="/"
             onClick={stopAllAudio}

@@ -141,20 +141,33 @@ async function speechmaticsTranscript(filePath: string): Promise<string> {
   return transcript.replace(/\s+/g, " ").trim();
 }
 
-function geminiModel() {
+const GEMINI_MODELS = [
+  "gemini-2.5-flash",
+  "gemini-2.0-flash",
+  "gemini-flash-latest",
+  "gemini-3.8-flash",
+  "gemini-1.5-flash",
+];
+
+async function geminiText(prompt: string): Promise<string> {
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error("GEMINI_API_KEY missing");
   const genAI = new GoogleGenerativeAI(key);
-  return genAI.getGenerativeModel({
-    model: "gemini-3.8-flash",
-    generationConfig: { temperature: 0.2 },
-  });
-}
-
-async function geminiText(prompt: string): Promise<string> {
-  const model = geminiModel();
-  const result = await model.generateContent(prompt);
-  return result.response.text().trim();
+  let lastError: Error | null = null;
+  for (const modelName of GEMINI_MODELS) {
+    try {
+      const model = genAI.getGenerativeModel({
+        model: modelName,
+        generationConfig: { temperature: 0.2 },
+      });
+      const result = await model.generateContent(prompt);
+      const text = result.response.text().trim();
+      if (text) return text;
+    } catch (err) {
+      lastError = err as Error;
+    }
+  }
+  throw lastError || new Error("All Gemini models failed");
 }
 
 async function polishTamil(raw: string): Promise<string> {

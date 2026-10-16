@@ -44,6 +44,13 @@
   --radius-card: 14px;
 }
 
+/* Brand display face — Noto Serif Tamil via next/font --font-tamil-display */
+.brand-tamil {
+  font-family: var(--font-tamil-display), "Noto Serif Tamil", "Noto Sans Tamil", serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 body {
   background-color: var(--color-bg-palm);
   color: var(--color-text-ink);

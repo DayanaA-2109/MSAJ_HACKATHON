@@ -1,6 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
-import { Noto_Sans_Tamil } from "next/font/google";
+import { Noto_Sans_Tamil, Noto_Serif_Tamil } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,6 +10,13 @@ const notoSansTamil = Noto_Sans_Tamil({
   subsets: ["tamil"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-tamil",
+  display: "swap",
+});
+
+const notoSerifTamil = Noto_Serif_Tamil({
+  subsets: ["tamil"],
+  weight: ["500", "600", "700"],
+  variable: "--font-tamil-display",
   display: "swap",
 });
 
@@ -25,7 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ta" className={`${notoSansTamil.variable} h-full antialiased`}>
+    <html
+      lang="ta"
+      className={`${notoSansTamil.variable} ${notoSerifTamil.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col font-sans bg-[#FDF8EE] text-[#2B1810]">
         <a
           href="#main-content"

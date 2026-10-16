@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "fetch-transcripts": "tsx scripts/fetch-transcripts.ts",
-    "transcribe-interviews": "tsx scripts/transcribe-interviews.ts"
+    "transcribe-interviews": "tsx scripts/transcribe-interviews.ts",
+    "enrich-neirkaanal": "tsx scripts/enrich-neirkaanal.ts"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
